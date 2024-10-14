@@ -1,4 +1,4 @@
-package com.caparniyazi.ds.usersservice.query;
+package com.appsdeveloperblog.estore.usersservice.query;
 
 import com.appsdeveloperblog.estore.core.model.PaymentDetails;
 import com.appsdeveloperblog.estore.core.model.User;
@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class UserEventsHandler {
+
     @QueryHandler
     public User findUserPaymentDetails(FetchUserPaymentDetailsQuery query) {
         PaymentDetails paymentDetails = PaymentDetails.builder()
@@ -18,8 +19,7 @@ public class UserEventsHandler {
                 .validUntilYear(2030)
                 .build();
 
-        User user = User.builder().firstName("Niyazi").lastName("Çapar").userId(query.getUserId())
+        return User.builder().firstName("Niyazi").lastName("Çapar").userId(query.getUserId())
                 .paymentDetails(paymentDetails).build();
-        return user;
     }
 }

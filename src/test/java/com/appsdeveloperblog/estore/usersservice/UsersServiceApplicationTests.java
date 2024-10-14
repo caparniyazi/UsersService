@@ -1,4 +1,4 @@
-package com.caparniyazi.ds.usersservice;
+package com.appsdeveloperblog.estore.usersservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
